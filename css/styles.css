@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+body{
+
+    background-image: linear-gradient(
+        white,
+        aqua
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4em;
+}
+
+:root {
+    --gradient: linear-gradient(
+        to right,
+        rgb(149, 114, 252),
+        rgb(67, 231, 173),
+        rgb(226, 212, 92)
+    )
+}
+
+#calc {
+    width: 500px;    
+    padding: 0.5em;
+    background-color: rgb(238, 238, 238);
+    color: rgb(68, 68, 68);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 20px black;
+    border-radius: 20px;
+}
+
+#calc h3 {
+    width: 5.5em;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: rgb(68, 68, 68);
+    padding-top: 2px;
+    background-image: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#operacoes {
+    text-align: right;
+}
+
+#op-anterior {
+    color: gray;
+    padding: 0.5em;
+    overflow-wrap: break-word;
+    min-height: 1.5em;
+}
+
+#op-atual {
+    min-height: 1.5em;
+    font-size: 3em;
+    font-weight: 700;
+    padding: 0.5em;
+    overflow-wrap: break-word;
+}
+
+#btn-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3px
+}
+
+#btn-container button {
+    border: 2px solid black;
+    border-radius: 2em;
+    height: 4.5em;
+    font-size: 1.2em;
+    background-color: #eaeaea;
+    cursor: pointer;
+}
+
+#btn-container .numero {
+    background-color: #eaeaea;
+}
+
+#btn-container button:hover {
+    background-color: #bababa;
+    border-color: aqua;
+}
+
+#btn-container #btn-igual {
+    grid-column: span 2;
+    background-color: aqua;
+}
+
+#btn-container #btn-igual:hover {
+    grid-column: span 2;
+    background-color: #bababa;
+}
